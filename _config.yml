@@ -22,7 +22,7 @@ title: DTXC.ORG
 description: >- # this means to ignore newlines until "baseurl:"
   一个人闲聊扯淡的地方。。。
 url: "https://dtxc.org" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: /:categories/:title.html
+permalink: /:categories/:title
 
 # Build settings
 theme: minima
