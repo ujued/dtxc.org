@@ -3,3 +3,7 @@
     border: none;
     padding: 5px 0;
 }
+.site-title {
+    font: 1.6rem;
+    font-weight: 700;
+}
