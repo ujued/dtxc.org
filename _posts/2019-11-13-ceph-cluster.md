@@ -12,7 +12,7 @@ node2: 作为Ceph服务主机
 node3: 作为Ceph服务主机    
 
 2. Shell 脚本1  
-```shell
+{% highlight shell %}
 cat <<EOF > /etc/yum.repos.d/ceph.repo
 [Ceph]
 name=Ceph packages for $basearch
@@ -51,11 +51,11 @@ firewall-cmd --zone=public --add-service=ceph-mon --permanent    # 5
 firewall-cmd --zone=public --add-service=ceph --permanent        
 firewall-cmd --reload
 
-```
+{% endhighlight %}
 
 2. Shell脚本2  
 
-```shell
+{% highlight shell %}
 yum install -y ceph-deploy                                       # 6
 ssh-key-gen; \
   ssh-copy-id -i ~/.ssh/id_esa.pub root@node2                    # 7
@@ -79,7 +79,7 @@ ceph-deploy osd create --data /dev/sdf node2
 ceph-deploy osd create --data /dev/sdf node3
 
 ceph -s                                                          # 16
-```
+{% endhighlight %}
 
 3. 2个脚本用途  
 第一个在 三个主机上都运行一遍，没有什么需要改的，直接运行即可。第二个脚本在Ceph部署机即node1上执行，需要看下面的说明作出改动。
@@ -102,7 +102,7 @@ ceph -s                                                          # 16
  #15 在各个节点创建并运行存储服务，这里每个节点都需要指定一个物理块设备，`/dev/sdf`改成你的块设备
  #16 查看集群状态大概会向下面这样，当然，只要helth是HEALTH_OK，即代表集群创建成功
 
-```text
+{% highlight text %}
 cluster:
     id:     6775bb7e-3fd6-4745-a613-4ff045e4c712
     health: HEALTH_OK
@@ -121,4 +121,4 @@ cluster:
  
   io:
     client:   29 KiB/s wr, 0 op/s rd, 2 op/s wr
-```
+{% endhighlight %}
