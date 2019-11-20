@@ -6,12 +6,12 @@ categories: nativecloud ceph
 ---
 > 本文旨在说明在`CentOS7`主机群上安装`Ceph`。以下脚本， 不要直接在你的机器上运行，看下面的几点说明后作出适当的修改。执行过程中，会有一般性错误，你能解决的。
 
-1. 主机群
+1. 主机群  
 node1: 作为部署机，和Ceph服务主机   
 node2: 作为Ceph服务主机   
 node3: 作为Ceph服务主机    
 
-2. Shell 脚本1
+2. Shell 脚本1  
 ```shell
 cat <<EOF > /etc/yum.repos.d/ceph.repo
 [Ceph]
@@ -53,7 +53,8 @@ firewall-cmd --reload
 
 ```
 
-2. Shell脚本2
+2. Shell脚本2  
+
 ```shell
 yum install -y ceph-deploy                                       # 6
 ssh-key-gen; \
@@ -80,10 +81,10 @@ ceph-deploy osd create --data /dev/sdf node3
 ceph -s                                                          # 16
 ```
 
-3. 2个脚本用途
+3. 2个脚本用途  
 第一个在 三个主机上都运行一遍，没有什么需要改的，直接运行即可。第二个脚本在Ceph部署机即node1上执行，需要看下面的说明作出改动。
 
-4. 脚本说明
+4. 脚本说明  
  #1 安装centos企业包  
  #2 主机时间同步服务
  #3 开启并允许开机启动时间同步服务
@@ -101,7 +102,7 @@ ceph -s                                                          # 16
  #15 在各个节点创建并运行存储服务，这里每个节点都需要指定一个物理块设备，`/dev/sdf`改成你的块设备
  #16 查看集群状态大概会向下面这样，当然，只要helth是HEALTH_OK，即代表集群创建成功
 
-```
+```text
 cluster:
     id:     6775bb7e-3fd6-4745-a613-4ff045e4c712
     health: HEALTH_OK
