@@ -5,4 +5,6 @@ date:   2019-11-13 16:29:41 +0800
 categories: nativecloud ceph
 ---
 
-epel-release
+yum install -y epel-release
+
+ceph-deploy
