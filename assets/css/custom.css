@@ -7,4 +7,12 @@
     font: 1.6rem;
     font-weight: 700;
 }
-.logo {float: left; width: 64px; height: 64px;border-radius: 32px;margin-right: 10px;}
+
+.logo {
+    float: left;
+    width: 64px; 
+    height: 64px;
+    border-radius: 32px;
+    margin-right: 20px;
+    box-shadow: 0 0 30px #1C2835;
+}
