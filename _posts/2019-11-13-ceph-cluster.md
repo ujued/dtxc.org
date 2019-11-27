@@ -7,9 +7,9 @@ categories: nativecloud ceph
 > 本文旨在说明在`CentOS7`主机群上安装`Ceph`。以下脚本， 不要直接在你的机器上运行，看下面的几点说明后作出适当的修改。执行过程中，会有一般性错误，你能解决的。
 
 ### 主机群  
-node1: 作为部署机，和Ceph服务主机   
-node2: 作为Ceph服务主机   
-node3: 作为Ceph服务主机    
+node1: 作为部署机和Ceph服务主机   
+node2: 仅作为Ceph服务主机   
+node3: 仅作为Ceph服务主机    
 
 ### Shell 脚本1  
 {% highlight shell %}
@@ -104,21 +104,21 @@ ceph -s                                                          # 16
 
 {% highlight text %}
 cluster:
-    id:     6775bb7e-3fd6-4745-a613-4ff045e4c712
-    health: HEALTH_OK
- 
-  services:
-    mon: 3 daemons, quorum worker1,worker3,node1 (age 90m)
-    mgr: worker3(active, since 3h), standbys: worker1, node1
-    osd: 5 osds: 5 up (since 90m), 5 in (since 3d)
-    rgw: 1 daemon active (worker1)
- 
-  data:
-    pools:   6 pools, 104 pgs
-    objects: 1.57k objects, 3.6 GiB
-    usage:   15 GiB used, 236 GiB / 251 GiB avail
-    pgs:     104 active+clean
- 
-  io:
-    client:   29 KiB/s wr, 0 op/s rd, 2 op/s wr
+  id:     6775bb7e-3fd6-4745-a613-4ff045e4c712
+  health: HEALTH_OK
+
+services:
+  mon: 3 daemons, quorum worker1,worker3,node1 (age 90m)
+  mgr: worker3(active, since 3h), standbys: worker1, node1
+  osd: 5 osds: 5 up (since 90m), 5 in (since 3d)
+  rgw: 1 daemon active (worker1)
+
+data:
+  pools:   6 pools, 104 pgs
+  objects: 1.57k objects, 3.6 GiB
+  usage:   15 GiB used, 236 GiB / 251 GiB avail
+  pgs:     104 active+clean
+
+io:
+  client:   29 KiB/s wr, 0 op/s rd, 2 op/s wr
 {% endhighlight %}
