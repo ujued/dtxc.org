@@ -2,6 +2,7 @@
     font-family: Lato,Helvetica,sans-serif;
     border: none;
     padding: 5px 0;
+    margin: 10px 0;
 }
 .site-title {
     font: 1.6rem;
@@ -15,5 +16,4 @@
     border-radius: 35px;
     margin-right: 12px;
     border: 2px solid #eee;
-    box-shadow: 0 0 30px #1C2835;
 }
