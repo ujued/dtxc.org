@@ -16,8 +16,6 @@
   font-weight: 600;
   letter-spacing: 0px;
   margin-bottom: 0;
-  line-height: 64px;
-  display: inline-block;
 
   @include media-query($on-palm) {
     padding-right: 45px;

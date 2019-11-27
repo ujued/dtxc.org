@@ -8,6 +8,7 @@
     font: 1.6rem;
     font-weight: 700;
     line-height: 78px;
+    display: inline-block;
 }
 
 .logo {
