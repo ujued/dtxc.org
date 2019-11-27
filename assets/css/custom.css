@@ -10,9 +10,10 @@
 
 .logo {
     float: left;
-    width: 64px; 
+    width: 66px; 
     height: 64px;
-    border-radius: 32px;
-    margin-right: 20px;
+    border-radius: 35px;
+    margin-right: 12px;
+    border: 2px solid #eee;
     box-shadow: 0 0 30px #1C2835;
 }
