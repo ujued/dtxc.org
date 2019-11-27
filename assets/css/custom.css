@@ -7,3 +7,4 @@
     font: 1.6rem;
     font-weight: 700;
 }
+.logo {float: left; width: 64px; height: 64px;border-radius: 32px;margin-right: 10px;}
