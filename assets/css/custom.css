@@ -19,3 +19,6 @@
     border-radius: 26px;
     border: 2px solid #eee;
 }
+article {
+    word-break: break-word;
+}
