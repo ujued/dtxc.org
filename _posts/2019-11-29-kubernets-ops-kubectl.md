@@ -5,8 +5,8 @@ date:   2019-11-29 14:34:41 +0800
 categories: nativecloud kubernetes
 ---
 
-### kubectl概览
-1. 列出Kubernetes资源  
+## kubectl概览
+#### 1.列出Kubernetes资源  
 
 ```shell
 
@@ -18,7 +18,7 @@ kubectl describe deployment kube-dns --namespace kube-system
 
 ```
 
-2. 从配置文件中创建资源  
+#### 2.从配置文件中创建资源  
 
 ```shell
 
@@ -32,7 +32,7 @@ kubectl apply -f ./examples/nginx/nginx.yaml
 kubectl get -f ./examples/nginx/nginx.yaml --show-labels
 ```
 
-3. 从命令行生成一个配置文件  
+#### 3.从命令行生成一个配置文件  
 
 ```shell
 # `--dry-run` 参数指明本次命令仅是为了输出要传送给APIServer的内容
@@ -40,14 +40,14 @@ kubectl get -f ./examples/nginx/nginx.yaml --show-labels
 kubectl create deployment nginx --dry-run -o yaml --image nginx
 ```
 
-4. 查看通过Kubernetes资源创建的`Pods`  
+#### 4.查看通过Kubernetes资源创建的`Pods`  
 
 ```shell
 # `-l`选项指定了标签筛选条件，创建资源时会指定一些`Labels`
 kubectl get pods -l app=nginx
 ```
 
-5. 调试容器  
+#### 5.调试容器  
 
 ```shell
 # 输出Label是nginx的所有Pods的日志
@@ -57,9 +57,9 @@ kubectl logs -l app=nginx
 kubectl exec -i -t  nginx-deployment-5c689d88bb-s7xcv [containerName] bash
 ```
 
-### Kubernetes资源（Resources）和控制器（Controllers）概览
+## Kubernetes资源（Resources）和控制器（Controllers）概览
 
-1. 资源（Resources）  
+#### 1.资源（Resources）  
 像Deployments, Services, Namespaces等Kubernetes对象的实例称为资源。  
 
 运行容器的资源常常叫做工作负载（Workloads）。
@@ -75,7 +75,7 @@ Deployments，StatefulSets，Jobs，CronJobs，DaemonSets等都是工作负载�
 * metadata.name (Instance name)
 来唯一标识资源（Resources）
 
-2. 资源结构（Resources Structure）  
+#### 2.资源结构（Resources Structure）  
 一般地，资源有如下组件构成：  
 TypeMeta: Resource Type apiVersion and kind.  
 
@@ -111,12 +111,12 @@ spec:
 ```
 > 一些像ConfigMaps， Secrets等资源不存在状态信息，他们不需要描述，所以他们没有Spec字段。
 
-3. 控制器（Controllers）  
+#### 3.控制器（Controllers）  
 控制器提供Kubernetes APIs。他们观察系统到的状态，监听到资源（像资源的创建更新和删除）或者系统（像Pod或主机节点死掉）的变化，然后尽职尽责的执行用户（如通过资源配置）或自动化（如自动伸缩）的指示。  
 
 比如，当用户创建一个Deployment, 如果这个Deployment存在，Deployment控制器（Deployment Controller）会检查对比已存在的 ReplicaSet，如果不存在，则会创建ReplicaSet。
 
-4. 控制器结构（Controller Structure）  
+#### 4.控制器结构（Controller Structure）  
 * 协调作用  
 Controllers actuate Resources by reading the Resource they are Reconciling + related Resources, such as those that they create and delete.  
 控制器不关心事件，只有当期望的状态和集群现有状态不一致时才开始协调。  
@@ -132,8 +132,8 @@ Controllers actuate Resources after they are written by Watching Resource Types,
 3.Scheduler(控制器)监视Pods  
 4.Node(控制器)监视Pods(+ Secrests + ConnfigMaps )
 
-### Kubernetes资源APIs(Kubernetes Resource APIs)
-1. Pods  
+## Kubernetes资源APIs(Kubernetes Resource APIs)
+#### 1.Pods  
 容器（Containers）运行在调度到主机的节点上的Pods里面。  
 Pods运行一个应用的单副本并提供如下：  
 Compute Resources (cpu, memory, disk)  
@@ -144,5 +144,5 @@ Mounting Shared Configuration and Secrets
 Mounting Storage Volumes  
 Initialization  
 
-2. 工作负载（Workloads）  
+#### 2.工作负载（Workloads）  
 TBD...
