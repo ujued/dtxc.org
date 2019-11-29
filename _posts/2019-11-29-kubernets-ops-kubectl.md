@@ -126,7 +126,6 @@ Controllers actuate Resources by reading the Resource they are Reconciling + rel
 4.Node(控制器)在节点运行Pods里的容器  
 * 监视作用  
 Controllers actuate Resources after they are written by Watching Resource Types, and then triggering Reconciles from Events. After a Resource is created/updated/deleted, Controllers Watching the Resource Type will receive a notification that the Resource has been changed, and they will read the state of the system to see what has changed (instead of relying on the Event for this information).  
-
 1.Deployment控制器监视Deployments + ReplicaSets (+ Pods)  
 2.ReplicaSet控制器监视ReplicaSets + Pods  
 3.Scheduler(控制器)监视Pods  
