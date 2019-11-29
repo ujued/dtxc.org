@@ -22,3 +22,6 @@
 article {
     word-break: break-word;
 }
+code {
+    word-break: normal;
+}
