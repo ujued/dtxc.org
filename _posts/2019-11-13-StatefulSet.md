@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Kubernetes StatefulSets"
+title:  "Kubernetes StatefulSet"
 date:   2019-11-13 09:29:41 +0800
 categories: nativecloud kubernetes
 ---
-和`Deployment`一样，有相同的`spec`字段描述来管理`Pods`。和Deployment不同的是，StatefullSets为所管理的 Pods 及其严格的维持一个标识。那些Pods虽然用一样的spec描述而创建，但是每一个都是不可替换的： 在任何调度中。每一个Pod都维持这个标识符。（来自官方文档的翻译）
+和`Deployment`一样，有相同的`spec`字段描述来管理`Pods`。和Deployment不同的是，StatefullSet为所管理的 Pods 及其严格的维持一个标识。那些Pods虽然用一样的spec描述而创建，但是每一个都是不可替换的： 在任何调度中。每一个Pod都维持这个标识符。（来自官方文档的翻译）
 
-StatefulSets的特征：  
+StatefulSet的特征：  
   稳定的，唯一的网络标识   
   稳定的，持久化存储  
   有序的，优雅部署和扩容  
