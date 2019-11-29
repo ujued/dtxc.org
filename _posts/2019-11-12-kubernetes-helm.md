@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Kubernets Helm 介绍"
+title:  "Kubernets Helm"
 date:   2019-11-12 20:07:41 +0800
 categories: nativecloud
 ---

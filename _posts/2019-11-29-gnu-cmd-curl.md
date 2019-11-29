@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GNU curl 命令常用实践"
+title:  "curl 命令常用实践"
 date:   2019-11-29 14:22:41 +0800
 categories: linux gnu shell
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux ip 命令常用实践"
+title:  "ip 命令常用实践"
 date:   2019-11-25 21:45:41 +0800
 categories: linux net
 ---
