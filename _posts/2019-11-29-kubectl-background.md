@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "kubectl 工具使用介绍（官方文档翻译）"
+title:  "kubectl 背景资料（官文翻）"
 date:   2019-11-29 14:34:41 +0800
 categories: nativecloud kubernetes
 ---
