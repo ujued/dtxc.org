@@ -5,8 +5,7 @@ date:   2019-12-02 16:32:41 +0800
 categories: nativecloud kubernetes argo cd
 ---
 
-# 核心概念（Core Concepts）
-相必你已经非常熟悉 Git,Docker,Kubernetes,Continuous Delivery和GitOps等的核心概念了。  
+> 相必你已经非常熟悉 Git,Docker,Kubernetes,Continuous Delivery和GitOps等的核心概念了。  
 
 * Application: 一组由配置文件定义的Kubernetes资源。是一个Kubernetes的`CRD`.  
 * Application source type: 一个用来构建Application的工具（Tool）.  
