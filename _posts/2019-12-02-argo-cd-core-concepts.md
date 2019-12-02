@@ -20,4 +20,4 @@ categories: nativecloud kubernetes argo cd
 * Configuration management tool： 说白了，就是 Tool  
 * Configuration management plugin: 自定义的Tool
 
-原文链接： [https://argoproj.github.io/argo-cd/core_concepts/]
+原文链接： [https://argoproj.github.io/argo-cd/core_concepts/](https://argoproj.github.io/argo-cd/core_concepts/)
