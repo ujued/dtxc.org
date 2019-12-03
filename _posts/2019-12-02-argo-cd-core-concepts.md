@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Argo CD 核心概念（官文翻）"
+title:  "Argo CD 核心概念（译）"
 date:   2019-12-02 16:32:41 +0800
 categories: nativecloud kubernetes argo cd
 ---

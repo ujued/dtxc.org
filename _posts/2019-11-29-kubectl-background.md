@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "kubectl 背景资料（官文翻）"
+title:  "kubectl 背景资料（译）"
 date:   2019-11-29 14:34:41 +0800
 categories: nativecloud kubernetes
 ---
@@ -145,3 +145,7 @@ Initialization
 
 #### 2.工作负载（Workloads）  
 TBD...
+
+
+
+原文链接：[https://kubectl.docs.kubernetes.io/](https://kubectl.docs.kubernetes.io/)
