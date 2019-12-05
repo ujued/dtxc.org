@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pod水平自动伸缩（HPA）"
+title:  "ArgoRollouts之Pod水平自动伸缩（HPA）"
 date:   2019-12-05 15:11:41 +0800
 categories: nativecloud argo rollouts
 ---
