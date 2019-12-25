@@ -7,4 +7,9 @@ categories: nativecloud storage ceph
 
 `PG` 处于 stuck状态，一般是`osd`节点数太少，或是节点间权重分配有误。
 
+```
+# 调整OSD节点存储PG权重
+ceph osd crush reweight osd.1 1.2
+```
+
 
